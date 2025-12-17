@@ -4,7 +4,7 @@
 
 2. create docker volume
     ```bash
-    docker volume create example_mysql_db_data
+    docker volume create example-mysql-db-data
     docker volume ls
     ```
     ```callout

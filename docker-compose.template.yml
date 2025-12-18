@@ -10,6 +10,13 @@ services:
     ports:
       - "3307:3306" # "localport:containerport"
     
+    networks:
+      - mysql-net
+
+networks:
+  mysql-net:
+    external: true
+    name: example-mysql-db-network
 
 volumes:
   example-mysql-db-data:

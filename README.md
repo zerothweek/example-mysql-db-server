@@ -22,6 +22,34 @@
 
 5. make `docker-compose.yml` 
 
+## db-server & db-manager network connection
+### same computer(way1)
+1. create shared network for both containers
+    ```bash
+    docker network create example-mysql-db-network
+    ```
+2. add network settings in docker-compose.yml (both yaml files in server and manager container)
+    ```yaml
+    services:
+    app:
+        ...
+        
+        networks:
+        - mysql-net
+
+    networks:
+    mysql-net:
+        external: true
+        name: example-mysql-db-network
+
+    ```
+### same computer(way2)
+
+### different computer(way1)
+
+### different computer(way2)
+
+
 ## basic mysql server usage
 1. access the mysql cli inside docker container
     ```bash

@@ -1,3 +1,6 @@
+## TODO
+- how to load a existing database.
+
 ## initial project directory settings
 1. choose mysql base image
     - eg. `mysql:8.2.0`
